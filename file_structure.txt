@@ -1,0 +1,10 @@
+web page
+|-->frontend
+|   |-->index.html
+|       |-->leaderboard
+|       |-->login
+|       |-->upload photo
+|
+|-->backend
+|    |-->   
+|

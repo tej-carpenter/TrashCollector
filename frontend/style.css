@@ -1,0 +1,159 @@
+@keyframes popUpOnStart{
+    from{transform: scale(0%);}
+    to{transform: scale(100%);}
+}
+@keyframes techy{
+    0%{
+        width: 0vh;
+        height: 0vh;
+        border-radius: 0px;
+    }
+    60%{
+        height: 0vh;
+        width: 80vh;
+        border-radius: 7px;
+    }
+    100%{
+        /* width: 80vh; */
+    }
+}
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body{
+    background: url("images/wlppr6221846.jpg") no-repeat fixed top;
+    background-size: cover;
+}
+nav{
+    height: 70px;
+    background: linear-gradient(#117374,transparent);
+    display: flex;
+    justify-content: right;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-align: right;
+    position: static;
+}
+
+button{
+    background: inherit;
+    border: none;
+}
+
+.nav-btn{
+    /* display: block; */
+    padding:0 15px 0 15px;
+    /* border: 1px solid black; */
+}
+#empty-nav-box{
+    width: 600px;
+}
+
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* homepage */
+.main-page-btn{
+    font-size: 11vh;
+    margin-bottom: 20px;
+    /* height: 100px; */
+    /* max-width: 100%; */
+    width: 100%;
+}
+
+
+
+
+.main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+.main-container{
+    border-radius: 20px;
+    width: 80vh;
+    height: 80vh;
+    border: 1px solid #117274;
+    box-shadow: 0px 0px 20px #117374;
+    overflow: scroll;
+    scrollbar-width: none;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    /* display: flex; */
+    /* justify-content: space-between; */
+    align-items: center;
+    text-align: center;
+    /* animation: popUpOnStart .5s; */
+    animation: techy 1s;
+
+}
+
+
+.btn{
+    background: #1172746e;
+    padding:10px 15px;
+    border-radius: 7px;
+    border: 2px solid #117274;
+}
+
+
+/* upload-form */
+fieldset{
+    border-radius: 10px;
+    border: 2px solid #117274;
+    color:#043132;
+    margin-bottom: 10px;
+    text-align: left;
+}
+input{
+    outline: none;
+    border:transparent;
+    background-color: transparent;
+    /* width: 90%; */
+}
+select{
+    background-color: transparent;
+}
+
+/* leaderboard */
+.leaderboard-card{
+    width: 100%;
+    height: 50px;
+    border-radius: 7px;
+    background-color: #1172746e;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+.team-name{
+    display: block;
+    font-size: 23px;
+    text-align: left;
+    /* padding:10px 5px; */
+    width: fit-content;
+}
+.team-score{
+    width: fit-content;
+    display: block;
+}
+.winner-card{
+    background-color: #ffd90091;
+}
+.runnerup-card{
+    background-color: silver;
+}
+
+/* login */
