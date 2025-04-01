@@ -8,12 +8,16 @@ function register() {
         return;
     }
 
-    if (localStorage.getItem(username)) {
-        document.getElementById("message").innerText = "Username already exists!";
-    } else {
-        localStorage.setItem(username, password);
-        document.getElementById("message").innerText = "Registration successful! You can now log in.";
-    }
+    fetch("http://localhost:5500/login", {  // ✅ Updated URL
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("message").innerText = data.message;
+    })
+    .catch(error => console.error("Error:", error));
 }
 
 // Login user
@@ -21,10 +25,17 @@ function login() {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
-    if (localStorage.getItem(username) === password) {
-        document.getElementById("message").innerText = "Login successful!";
-        window.location.href = "/frontend"; // Redirect to game page
-    } else {
-        document.getElementById("message").innerText = "Invalid username or password!";
-    }
+    fetch("http://localhost:5500/login", {  // ✅ Updated URL
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("message").innerText = data.message;
+        if (data.message === "Login successful!") {
+            window.location.href = "/frontend"; 
+        }
+    })
+    .catch(error => console.error("Error:", error));
 }
