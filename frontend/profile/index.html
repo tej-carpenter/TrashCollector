@@ -6,17 +6,33 @@
     </head>
     <body>
         <nav>
-            <a href="/frontend/" id="home-btn"><button class="nav-btn box-btn">Home</button></a>
+            <a href="../index.html" id="home-btn"><button class="nav-btn box-btn">Home</button></a>
             <a href="" id="empty-nav-box"></a>
-            <a href="/frontend/leaderboard/" id="leaderboard-btn"><button class="nav-btn box-btn home-btm">leaderboard</button></a>
-            <a href="/frontend/upload/" id="upload-btn"><button class="nav-btn box-btn home-btm">upload</button></a>
-            <a href="/frontend/login/" id="login-btn"><button class="nav-btn box-btn home-btm">login</button></a>
-
+            <a href="../leaderboard/index.html" id="leaderboard-btn"><button class="nav-btn box-btn">leaderboard</button></a>
+            <a href="../upload/index.html" id="upload-btn"><button class="nav-btn box-btn">upload</button></a>
+            <a href="../login/index.html" id="login-btn"><button class="nav-btn box-btn">login</button></a>
         </nav>
         <div class="main">
             <div class="main-container">
-                
+                <h2>Welcome, <span id="username"></span>!</h2>
+                <p>Your current score: <span id="score"></span></p>
             </div>
         </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const username = localStorage.getItem("username");
+                if (!username) {
+                    window.location.href = "../login/index.html";
+                    return;
+                }
+                fetch(`http://127.0.0.1:5500/profile/${username}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById("username").innerText = data.username;
+                        document.getElementById("score").innerText = data.score;
+                    })
+                    .catch(error => console.error("Error:", error));
+            });
+        </script>
     </body>
 </html>

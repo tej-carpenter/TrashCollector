@@ -1,10 +1,22 @@
-web page
-|-->frontend
-|   |-->index.html
-|       |-->leaderboard
-|       |-->login
-|       |-->upload photo
-|
-|-->backend
-|    |-->   
-|
+COMPUTER_NETWORK_PROJECT
+└── backend
+    ├── node_modules
+    ├── package-lock.json
+    ├── package.json
+    └── server.js
+└── frontend
+    ├── images
+    │   ├── wlppr4255081.jpg
+    │   └── wlppr6221846.jpg
+    ├── leaderboard
+    │   └── index.html
+    ├── login
+    │   └── index.html
+    ├── profile
+    │   └── index.html
+    ├── scripts
+    │   └── loginScript.js
+    └── upload
+        └── index.html
+    └── index.html
+└── index.html

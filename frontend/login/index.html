@@ -8,14 +8,14 @@
         <nav>
             <a href="/frontend/" id="home-btn"><button class="nav-btn box-btn">Home</button></a>
             <a href="" id="empty-nav-box"></a>
-            <a href="/frontend/leaderboard/" id="leaderboard-btn"><button class="nav-btn box-btn home-btm">leaderboard</button></a>
-            <a href="/frontend/upload/" id="upload-btn"><button class="nav-btn box-btn home-btm">upload</button></a>
-            <a href="/frontend/login/" id="login-btn"><button class="nav-btn box-btn home-btm">login</button></a>
-
+            <a href="/frontend/leaderboard/" id="leaderboard-btn"><button class="nav-btn box-btn">leaderboard</button></a>
+            <a href="/frontend/upload/" id="upload-btn"><button class="nav-btn box-btn">upload</button></a>
+            <a href="/frontend/login/" id="login-btn"><button class="nav-btn box-btn">login</button></a>
+            <a href="/frontend/profile/" id="profile-btn"><button class="nav-btn box-btn">profile</button></a>
         </nav>
         <div class="main">
             <div class="main-container">
-                <form action="" method="post">
+                <!-- <form action="" method="post"> -->
                     
                     <fieldset>
                         <legend>username</legend>
@@ -27,10 +27,10 @@
                     </fieldset>
                     <!-- <input type="checkbox" name="remember-me" id="remember-me">remember me
                     <a href="">forgot password?</a><br> -->
-                    <button onclick="register()" class="btn">register</button>
-                    <button onclick="login()" class="btn">login</button> 
+                    <button onclick="handleAuth('register')" class="btn" type="button">Register</button>
+                    <button onclick="handleAuth('login')" class="btn" type="button">Login</button> 
                     <p id="message"></p>
-                </form>
+                <!-- </form> -->
             </div>
         </div>
         <script src="/frontend/scripts/loginScript.js"></script>
