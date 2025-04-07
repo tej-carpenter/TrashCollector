@@ -74,6 +74,5 @@ $conn->close();
             </form>
         </div>
     </div>
-    <script src="scripts/loginScript.js"></script>
 </body>
 </html>

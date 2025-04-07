@@ -19,7 +19,8 @@ if (!isset($_SESSION['username'])) {
             <a href="" id="empty-nav-box"></a>
             <a href="leaderboard.php" id="leaderboard-btn"><button class="nav-btn box-btn home-btm">leaderboard</button></a>
             <a href="upload.php" id="upload-btn"><button class="nav-btn box-btn home-btm">upload</button></a>
-            <a href="login.php" id="login-btn"><button class="nav-btn box-btn home-btm">login</button></a>
+            <a href="join-room.php" id="join-room-btn"><button class="nav-btn box-btn home-btm">Join Room</button></a>
+            <a href="logout.php" id="logout-btn"><button class="nav-btn box-btn home-btm">Logout</button></a>
 
         </nav>
         <div class="main">

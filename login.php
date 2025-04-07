@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (password_verify($pass, $hashed_password)) {
             $_SESSION['username'] = $user;
-            header("Location: profile.php");
+            header("Location: index.php");
             exit();
         } else {
             $loginError = "❌ Invalid password.";
@@ -50,17 +50,19 @@ $conn->close();
 <body>
     <nav>
         <?php if (isset($_SESSION['username'])): ?>
-            <a href="profile.php" id="profile-btn"><button class="nav-btn box-btn">Profile</button></a>
+            <a href="index.php" id="profile-btn"><button class="nav-btn box-btn">Profile</button></a>
             <a href="" id="empty-nav-box"></a>
             <a href="leaderboard.php" id="leaderboard-btn"><button class="nav-btn box-btn home-btm">Leaderboard</button></a>
             <a href="upload.php" id="upload-btn"><button class="nav-btn box-btn home-btm">Upload</button></a>
-            <a href="logout.php" id="logout-btn"><button class="nav-btn box-btn home-btm">Logout</button></a>
+        <a href="join-room.php" id="join-room-btn"><button class="nav-btn box-btn home-btm">Join Room</button></a>
+        <a href="logout.php" id="logout-btn"><button class="nav-btn box-btn home-btm">Logout</button></a>
         <?php else: ?>
             <a href="index.php" id="home-btn"><button class="nav-btn box-btn">Home</button></a>
             <a href="" id="empty-nav-box"></a>
             <a href="leaderboard.php" id="leaderboard-btn"><button class="nav-btn box-btn home-btm">Leaderboard</button></a>
             <a href="upload.php" id="upload-btn"><button class="nav-btn box-btn home-btm">Upload</button></a>
-            <a href="register.php" id="register-btn"><button class="nav-btn box-btn home-btm">Register</button></a>
+        <a href="join-room.php" id="join-room-btn"><button class="nav-btn box-btn home-btm">Join Room</button></a>
+        <a href="register.php" id="register-btn"><button class="nav-btn box-btn home-btm">Register</button></a>
         <?php endif; ?>
     </nav>
 

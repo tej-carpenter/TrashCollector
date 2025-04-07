@@ -21,7 +21,7 @@
     margin:0;
     box-sizing: border-box;
     font-size: 20px;
-    font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:sans-serif;
 }
 body{
     background: url("images/wlppr6221846.jpg") no-repeat fixed top;
@@ -132,7 +132,7 @@ select{
     height: 50px;
     border-radius: 7px;
     background-color: #1172746e;
-    margin-bottom: 10px;
+    margin: 10px 0px 10px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -161,10 +161,32 @@ select{
 .about{
     width: 100%;
     padding: 20px 0px 20px 0px;
-    /* height: 100vh; */
-    border: 1px solid black;
+    height: 100vh;
+    /* border: 1px solid black; */
 }
 .about p{
     padding: 100px 0px 0px 10px;
-    color:red;
+    /* color:red; */
+}
+
+/* profile */
+.square-card{
+    width: 35vh;
+    /* height: 30vh; */
+    background: #1172746e;
+    padding: 10px;
+    text-align: left;
+    border: 2px solid #117274;
+    border-radius: 7px;
+}
+
+.upper-square-card{
+    /* border: 2px solid #117274; */
+    height: 20vh;
+    font-size: 12vh;
+}
+.lower-square-card{
+    /* border: 2px solid #117274; */
+    height: 5vh;
+    /* font-size: 20vh; */
 }
